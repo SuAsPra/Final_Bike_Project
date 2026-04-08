@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Smart Cycling Monitoring Dashboard</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+h1{
+margin-top:20px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:12px;
+width:200px;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+.value{
+font-size:28px;
+font-weight:bold;
+}
+
+.good{color:#22c55e;}
+.warn{color:#facc15;}
+.bad{color:#ef4444;}
+
+.description{
+max-width:900px;
+margin:auto;
+margin-top:30px;
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🚲 Smart Cycling Monitoring Dashboard</h1>
+
+<h3>Vehicle ID: TN-07-BX-2045</h3>
+
+<div class="container">
+
+<div class="card">
+<h3>Distance Sensor 1</h3>
+<div class="value" id="d1">--</div>
+</div>
+
+<div class="card">
+<h3>Distance Sensor 2</h3>
+<div class="value" id="d2">--</div>
+</div>
+
+<div class="card">
+<h3>Rain Level</h3>
+<div class="value" id="rain">--</div>
+</div>
+
+<div class="card">
+<h3>Pulse Rate</h3>
+<div class="value" id="pulse">--</div>
+</div>
+
+<div class="card">
+<h3>Air Quality</h3>
+<div class="value" id="air">--</div>
+</div>
+
+</div>
+
+<div class="description">
+
+<h2>Why This System Matters</h2>
+
+<p>
+Monitoring needs for cycling vary significantly by age and focus,
+ranging from theft prevention for bikes to safety and location
+tracking for children, and performance analytics for adults.
+</p>
+
+<p>
+This system integrates multiple sensors to continuously monitor
+environmental and rider health conditions in real time.
+Distance sensors help detect possible collisions or obstacles,
+air quality sensors monitor pollution exposure, rain detection
+helps anticipate road hazards, and pulse sensors track rider
+health conditions.
+</p>
+
+<p>
+By combining IoT hardware with a web-based dashboard,
+the system provides a centralized monitoring interface that
+can alert users instantly in case of accidents or medical emergencies.
+This improves cycling safety, situational awareness,
+and rider health monitoring.
+</p>
+
+</div>
+
+<script>
+
+async function getData(){
+
+const res = await fetch("http://localhost:5000/sensor");
+
+const data = await res.json();
+
+document.getElementById("d1").innerText=data.distance1+" cm";
+document.getElementById("d2").innerText=data.distance2+" cm";
+document.getElementById("rain").innerText=data.rain+" %";
+document.getElementById("pulse").innerText=data.pulse;
+document.getElementById("air").innerText=data.air;
+
+}
+
+setInterval(getData,2000);
+
+</script>
+
+</body>
+</html>
