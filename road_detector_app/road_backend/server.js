@@ -10,7 +10,7 @@ app.use(express.json());
 
 let latestSOS = null;
 
-const TELEGRAM_TOKEN = "8799810863:AAHwBwhCKFPHlFZDBOtgq9K7O75Z_HqWcQA";
+const TELEGRAM_TOKEN = "put it here1";
 const CHAT_ID = "7919402977";
 
 
@@ -54,7 +54,7 @@ console.log("Telegram error:", err.message);
 
 // ================= MONGODB CONNECT =================
 
-mongoose.connect("mongodb+srv://suriyan:COOWG9nsnloxnMtV@cluster0.pzuq2ov.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("put it here 2")
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
@@ -289,7 +289,7 @@ title: m.prediction + " (" + (m.confidence * 100).toFixed(1) + "%)"
 </script>
 
 <script async
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs5_jj-d-lUvFx-KgL5HI1iNQC45s1ryI&callback=initMap">
+src="google map 3 put ">
 </script>
 
 </body>
