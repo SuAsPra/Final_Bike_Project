@@ -91,7 +91,7 @@ Telegram in emergency contacts phone when there is an SOS alert - ![WhatsApp Ima
    - Automatic alerts for hazards
 
 2. **GPS & Location Tracking**
-   - Real-time GPS coordinates
+   - Realtime GPS coordinates
    - Location timestamp recording
    - Google Maps integration
    - Location sharing for emergencies
