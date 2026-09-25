@@ -2,6 +2,22 @@
 
 A comprehensive IoT solution for real-time road condition monitoring and safety alerts for cyclists. This project combines a Flutter mobile app with machine learning, sensor data from ESP32, and cloud integration for emergency alerts.
 
+## 📜 Patent
+
+**Publication No.: IN202641109300 A1**
+**Title: Pothole Detection & Road Anomaly Monitoring System**
+
+This invention presents an **AI- and IoT-enabled road safety and monitoring system** designed to detect road anomalies and provide real-time safety assistance for cyclists. The system integrates a **Flutter-based mobile application, machine learning-based computer vision, GPS tracking, ESP32 sensor systems, backend services, and cloud-connected data storage** into a unified monitoring platform.
+
+The system uses a **TensorFlow/Keras machine learning model converted to TensorFlow Lite** to perform on-device classification of road conditions into **normal road, pothole, and speed breaker** categories using camera input. Detected road anomalies are associated with **GPS coordinates and timestamps** and transmitted to a Node.js-based backend for storage and visualization.
+
+In addition to vision-based road monitoring, the system incorporates **ESP32-connected sensors**, including ultrasonic sensors, rain sensing, pulse/heart-rate monitoring, and air-quality sensing. The system can monitor abnormal conditions such as potential collisions, sudden impacts, and health-related emergencies.
+
+An integrated **emergency response mechanism** provides manual and automated SOS activation through the mobile application, including voice and shake-based triggers. Emergency events can be transmitted through a **Telegram bot with the rider's location**, enabling rapid notification of designated emergency contacts.
+
+The invention therefore combines **computer vision, edge AI, GPS-based geolocation, IoT sensor monitoring, backend data processing, and automated emergency communication** to provide an integrated road-condition monitoring and cyclist safety solution.
+
+
 ## 📋 Project Overview
 
 The Final Bike Project is a smart bicycle monitoring system that detects road conditions (potholes, speed breakers, normal roads), monitors rider health and bike safety in real-time, and sends emergency alerts. The system integrates:
